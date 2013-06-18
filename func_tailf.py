@@ -1,14 +1,14 @@
 #!/usr/bin/env python
+# -*- coding: utf-8
 
 # Написать реализацию tail -f, используя ключевое слово yield. 
 # Реализовать функцию-генератор tailf, которая выдает следующую строку по запросу, а не все сразу.
 
 
-import sys
-import time
+import sys, os, time
 
 def tail_f (logfile):
-    logfile.seek (0,2) # .seek (offset, origion) -> 0 is is in characters and is measured from the beginning; 2 is (from the end of the file)
+   logfile.seek (0,2)
     while True:
         line = logfile.readline()
         if not line:
@@ -17,6 +17,6 @@ def tail_f (logfile):
         yield line
 
 logfile = sys.argv[1] # take parameters from comandline
-logfile = open ('security.log','r')
+
 for line in tail_f (logfile):
     print line
