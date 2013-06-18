@@ -17,6 +17,6 @@ def tail_f (logfile):
         yield line
 
 logfile = sys.argv[1] # take parameters from comandline
-
-for line in tail_f (logfile):
+f = open (logfile)
+for line in tail_f (f):
     print line
