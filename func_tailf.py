@@ -4,19 +4,18 @@
 # Написать реализацию tail -f, используя ключевое слово yield. 
 # Реализовать функцию-генератор tailf, которая выдает следующую строку по запросу, а не все сразу.
 
-
-import sys, os, time
+import sys, time
 
 def tail_f (logfile):
-   logfile.seek (0,2)
+    logfile.seek (0,0)
     while True:
-        line = logfile.readline()
+        line = logfile.readline()          
         if not line:
             time.sleep (0.5)
-            continue
+            continue            
         yield line
 
 logfile = sys.argv[1] # take parameters from comandline
 f = open (logfile)
 for line in tail_f (f):
-    print line
+    print line.rstrip('\n')
