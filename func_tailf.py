@@ -6,16 +6,37 @@
 
 import sys, time
 
-def tail_f (logfile):
-    logfile.seek (0,0)
+def tail_f (logfile):    
     while True:
-        line = logfile.readline()          
-        if not line:
+        lines = logfile.readlines()
+        last_10_lines = lines[-10:]          
+        if not lines:
             time.sleep (0.5)
             continue            
-        yield line
+        yield last_10_lines
 
-logfile = sys.argv[1] # take parameters from comandline
+logfile = sys.argv[1] 
 f = open (logfile)
-for line in tail_f (f):
-    print line.rstrip('\n')
+for last_10_lines in tail_f (f):
+    print last_10_lines
+
+# Просто прочиает файл и выведет его на экран
+#logfile = sys.argv[1]
+#f = open (logfile)
+#for line in f:
+#    print line.rstrip('\n')
+
+# либо же выведет файл как список (list) и последние 10 элементов
+#logfile = sys.argv[1]
+#f = open (logfile)
+#lines = f.readlines()
+#last_10_lines = lines[-10:]
+#print last_10_lines
+
+# вывести последние 10 элементов из списка без срезов, с помощью цикла
+#logfile = sys.argv[1]
+#f = open (logfile)
+#lines = f.readlines()
+#len_list = len(lines)
+#for line in range(len_list-10, len_list):    
+#    print lines[line]
