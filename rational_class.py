@@ -39,3 +39,9 @@ class rational(object):
         if isinstance (other,(int,long)):
             return rational(other)/self
         return rational(other.n*self.d, self.d*other.d)
+
+    def __mul__(self, other):
+        print "Operation of multiplication"
+        mul = rational(self.n * other.d * other.n * self.d, self.d * other.d)
+        result = mul.reduce()
+        return result
