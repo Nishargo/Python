@@ -38,4 +38,4 @@ class rational(object):
         print "Operation of division"
         if isinstance (other,(int,long)):
             return rational(other)/self
-        return rational(other.n*self.d, self.d*other.n)
+        return rational(other.n*self.d, self.d*other.d)
