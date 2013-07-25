@@ -21,7 +21,7 @@ def shut_down(s):
 print shut_down("YES")
 
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 def shut_down(s):
     s = s.lower() 
@@ -36,4 +36,17 @@ def shut_down(s):
 
 print shut_down("YES")
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+#This is a two-parter: first, define a function, distance_from_zero, with one parameter (choose any parameter name you like).
+#Second, have that function do the following:
+#Check the type of the input it receives. If the type is int or float, the function should return the absolute value of the function input.
+#If the type is any other type, the function should return "Not an integer or float!"
+
+def distance_from_zero(param):
+    if type(param) == int or type(param) == float:
+        return abs(param)
+    else:
+        return "Not an integer or float!"
+    
+print distance_from_zero(-125.5)
