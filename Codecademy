@@ -1,0 +1,16 @@
+def shut_down(s):
+    if s == "Yes" or s == "yes" or s == "YES":  
+        
+        print "Shutting down..."
+        return "Shutting down..."
+        
+    elif s == "No" or s == "no" or s == "NO":
+        
+        print "Shutdown aborted!"
+        return "Shutdown aborted!"
+    
+    else:
+        print "Sorry, I didn't understand you."
+        return "Sorry, I didn't understand you."
+
+shut_down("YES")
