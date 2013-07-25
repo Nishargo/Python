@@ -78,3 +78,13 @@ def area_of_circle(radius):
 print area_of_circle(5)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# First, write a function called hotel_cost that takes the variable nights as input. The function should return how 
+# much you have to pay if the hotel costs 140 dollars for every night that you stay.
+
+def hotel_cost(nights):
+    result = 140 * nights
+    return result
+print hotel_cost(9)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
