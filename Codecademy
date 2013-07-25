@@ -20,9 +20,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
 def shut_down(s):
-
-    s = s.lower() or s.upper() 
-    
+    s = s.lower() or s.upper()     
     if s == "yes":             
        return "Shutting down..."
         
