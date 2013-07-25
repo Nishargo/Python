@@ -1,6 +1,7 @@
-#Write a function, shut_down, that takes one parameter (you can use anything you like; in this case, we'd use s for string). The shut_down function should return "Shutting down..." when it gets "Yes", "yes", or "YES" as an argument, and "Shutdown aborted!" when it gets "No", "no", or "NO".
-
-#If it gets anything other than those inputs, the function should return "Sorry, I didn't understand you."
+# Write a function, shut_down, that takes one parameter (you can use anything you like; in this case, 
+# we'd use s for string). The shut_down function should return "Shutting down..." when it gets "Yes", "yes", 
+# or "YES" as an argument, and "Shutdown aborted!" when it gets "No", "no", or "NO".
+# If it gets anything other than those inputs, the function should return "Sorry, I didn't understand you."
 
 
 def shut_down(s):
@@ -38,10 +39,11 @@ print shut_down("YES")
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-#This is a two-parter: first, define a function, distance_from_zero, with one parameter (choose any parameter name you like).
-#Second, have that function do the following:
-#Check the type of the input it receives. If the type is int or float, the function should return the absolute value of the function input.
-#If the type is any other type, the function should return "Not an integer or float!"
+# This is a two-parter: first, define a function, distance_from_zero, with one parameter (choose any parameter
+# name you like). Second, have that function do the following:
+# Check the type of the input it receives. If the type is int or float, the function should return the absolute 
+# value of the function input.
+# If the type is any other type, the function should return "Not an integer or float!"
 
 def distance_from_zero(param):
     if type(param) == int or type(param) == float:
@@ -50,3 +52,15 @@ def distance_from_zero(param):
         return "Not an integer or float!"
     
 print distance_from_zero(-125.5)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#Write a function called is_even that takes one input, x, and returns the string "yep" if the input 
+#is even and "nope" otherwise. You do not need to call the function.
+
+def is_even(x):
+    if x%2 == 0:
+        return "yep"
+    else:
+        return "nope"
+is_even(-50)
