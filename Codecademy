@@ -1,3 +1,8 @@
+#Write a function, shut_down, that takes one parameter (you can use anything you like; in this case, we'd use s for string). The shut_down function should return "Shutting down..." when it gets "Yes", "yes", or "YES" as an argument, and "Shutdown aborted!" when it gets "No", "no", or "NO".
+
+#If it gets anything other than those inputs, the function should return "Sorry, I didn't understand you."
+
+
 def shut_down(s):
     if s == "Yes" or s == "yes" or s == "YES":  
         
