@@ -15,8 +15,7 @@ def shut_down(s):
 
 print shut_down("YES")
 
-
-
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 def shut_down(s):
       
