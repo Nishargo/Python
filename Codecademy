@@ -14,3 +14,21 @@ def shut_down(s):
         return "Sorry, I didn't understand you."
 
 print shut_down("YES")
+
+
+
+
+def shut_down(s):
+      
+    if s.lower() or s.upper():        
+     
+       return "Shutting down..."
+        
+    elif s.upper():       
+       
+       return "Shutdown aborted!"
+    
+    else:      
+       return "Sorry, I didn't understand you."
+
+print shut_down("No")
