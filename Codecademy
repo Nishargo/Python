@@ -88,3 +88,33 @@ def hotel_cost(nights):
 print hotel_cost(9)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# Below your existing code, write a function called plane_ride_cost that takes a string, city, as input. 
+# The function should return a different price depending on the location. Below are the valid destinations and their 
+# corresponding round-trip prices.
+
+"Charlotte": 183
+"Tampa": 220
+"Pittsburgh": 222
+"Los Angeles": 475
+
+def hotel_cost(nights):
+    result = 140 * nights
+    return result
+print hotel_cost(9)
+
+def plane_ride_cost(city):
+    if city == "Charlotte":
+        return 183
+    if city == "Tampa":
+        return 220
+    elif city == "Pittsburgh":
+        return 222
+    else:
+        return 475
+print plane_ride_cost("Tampa")
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
