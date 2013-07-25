@@ -18,17 +18,17 @@ print shut_down("YES")
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-
 def shut_down(s):
-    s = s.lower() or s.upper()     
+    s = s.lower() 
     if s == "yes":             
        return "Shutting down..."
         
-    elif s == "no":     
+    elif s == "no":      
        return "Shutdown aborted!"
     
     else:      
        return "Sorry, I didn't understand you."
 
-print shut_down("dgdsghdg")
+print shut_down("YES")
+
 
