@@ -127,11 +127,14 @@ def rental_car_cost(days):
     if days <=2:
         res_1 = 40 * days
         return res_1
-    if days == 3 or days == 4 or days == 5 or days == 6:
+    if days >=3 and days <7:
         res_2 = ((days * 40) - 20)
         return res_2
     elif  days >= 7:
         res_3 = ((days*40) - 50)
         return res_3
 print rental_car_cost(100)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 
