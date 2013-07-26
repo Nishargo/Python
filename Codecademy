@@ -157,9 +157,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # Have your function return the sum of the rental_car_cost, hotel_cost, and plane_ride_cost functions with their 
 # respective inputs.
 
-
+def trip_cost(city, days):
+    return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city)
+print trip_cost("Tampa", 7)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
-Have your function return the sum of the rental_car_cost, hotel_cost, and plane_ride_cost functions with their respective inputs.
