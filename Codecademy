@@ -116,5 +116,22 @@ print plane_ride_cost("Tampa")
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+# Below your existing code, write a function called rental_car_cost that takes days as input and returns the cost 
+# for renting a car for said number of days. The cost must abide by the following conditions:
+# Every day you rent the car is $40.
+# If you rent the car for 3 or more days, you get $20 off your total. 
+# If you rent the car for 7 or more days, you get $50 off your total. (This does not stack with the 20 dollars you 
+# get for renting the car over 3 days.)
 
+def rental_car_cost(days):
+    if days <=2:
+        res_1 = 40 * days
+        return res_1
+    if days == 3 or days == 4 or days == 5 or days == 6:
+        res_2 = ((days * 40) - 20)
+        return res_2
+    elif  days >= 7:
+        res_3 = ((days*40) - 50)
+        return res_3
+print rental_car_cost(100)
 
