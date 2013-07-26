@@ -152,4 +152,14 @@ print rental_car_cost(2)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+# Below your existing code, write a function called trip_cost that takes two inputs, city and days. city should be 
+# the city that you are going to visit and days should be the number of days that you are staying.
+# Have your function return the sum of the rental_car_cost, hotel_cost, and plane_ride_cost functions with their 
+# respective inputs.
 
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+Have your function return the sum of the rental_car_cost, hotel_cost, and plane_ride_cost functions with their respective inputs.
