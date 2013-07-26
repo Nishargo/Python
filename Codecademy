@@ -123,6 +123,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # If you rent the car for 7 or more days, you get $50 off your total. (This does not stack with the 20 dollars you 
 # get for renting the car over 3 days.)
 
+~ FIRST VARIANT ~ 
+
 def rental_car_cost(days):
     if days <=2:
         res_1 = 40 * days
@@ -134,6 +136,19 @@ def rental_car_cost(days):
         res_3 = ((days*40) - 50)
         return res_3
 print rental_car_cost(100)
+
+~ SECOND VARIANT ~
+
+def rental_car_cost(days):
+    if days >= 7:
+        discount = 50
+        return (days * 40) - discount
+    elif days >= 3 and days < 7:
+        discount = 20
+        return (days * 40) - discount
+    else:
+        return (days * 40)
+print rental_car_cost(2)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
