@@ -163,4 +163,17 @@ print trip_cost("Tampa", 7)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+# Make it so that your trip_cost function takes a third parameter, spending_money. Just modify the trip_cost function 
+# to do just as it did before, except add the spending money to the total that it returns.
 
+def trip_cost(city, days, spending_money):
+    return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
+print trip_cost("Tampa", 7, 1500)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# Now that you have it all together, print out the cost of a trip to "Los Angeles" for 5 days with an extra 600 dollars 
+# of spending money.
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
