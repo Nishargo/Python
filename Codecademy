@@ -180,3 +180,11 @@ print hotel_cost(5)
 bill = hotel_cost(5)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# Below your existing code, write a function called get_min that takes balance and rate as inputs (in that order) 
+# and returns the minimum payment that you can make with your total balance. balance and rate should both be given
+# as numbers and not percentages, so 2% is 0.02.
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Go ahead and print out the minimum payment of your bills with a 2% rate, as calculated by your get_min function.
