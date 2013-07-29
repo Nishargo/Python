@@ -203,7 +203,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # Note that 1/12th of your interest multiplied by your balance is equal to the amount of interest you pay each month
 # (or at least close, anyway). So, addmonthlyinterest(100) should return 101.25.
 
+def hotel_cost(nights):
+    return nights * 140
+bill = hotel_cost(5)
 
+def add_monthly_interest(balance):
+    return balance * (1 + (0.15 / 12))
+print add_monthly_interest(bill)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
