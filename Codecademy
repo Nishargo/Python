@@ -172,8 +172,11 @@ print trip_cost("Tampa", 7, 1500)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-# Now that you have it all together, print out the cost of a trip to "Los Angeles" for 5 days with an extra 600 dollars 
-# of spending money.
+# Call the hotel_cost function with 5 nights as the input and store the result in a variable called bill.
 
+def hotel_cost(nights):    
+    return (nights * 140)
+print hotel_cost(5) 
+bill = hotel_cost(5)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
