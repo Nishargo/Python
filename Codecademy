@@ -213,9 +213,33 @@ print add_monthly_interest(bill)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+# Finish the function make_payment that takes the inputs payment and balance.
+# Have the function return the string "You still owe: x", with x being the amount that you still owe. 
+# Remember to add interest to the final amount!
+
+def hotel_cost(nights):
+    return nights * 140
+bill = hotel_cost(5)
+print bill
+
+def add_monthly_interest(balance):
+    return balance * (1 + (0.15 / 12))
+print add_monthly_interest(bill)
+
+def make_payment(payment, balance):
+    pay = (balance - payment)
+    new_balance = add_monthly_interest(pay)    
+    return "You still owe: " + str(new_balance)
+print make_payment(250, bill)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+# To finish up, make a $100 first payment on your hotel bill using your make_payment function. Remember that you 
+# stayed at the hotel for 5 nights.
+# Finally, print that result to the console!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
