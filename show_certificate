@@ -1,0 +1,26 @@
+from django.http import Http404
+from django.core.exceptions import ObjectDoesNotExist
+
+def show_certificate(request, student_id):
+    error = None
+
+    try:
+        student = Student.objects.get(pk=student_id)
+    except Student.DoesNotExist:
+        raise Http404
+
+    status = student.result
+    if status == "PASS":
+        return redirect('show_certificate')
+    else:
+        error = "Student doesn't pass exams"
+
+    # try:
+    #     status = student.result
+    #     status == "PASS"
+    # except ObjectDoesNotExist:
+    #     error = "Student doesn't pass exams."
+
+    return render(request, 'certificate/show_certificate.html', {
+        'error': error,
+        })
