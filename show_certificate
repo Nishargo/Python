@@ -1,3 +1,34 @@
+<script type="text/javascript">
+
+  $(document).ready(function(){
+  $('.delete').click(function(){
+    var student_id = $(this).attr('id');
+    var url = $(this).attr('href');
+    $.getJSON(url, function(data){
+        console.log(data);
+    });
+    toggleDiv('item'+student_id);
+    return false;
+    });
+    
+    function toggleDiv(divId) {
+        $("#"+divId).toggle(500);
+    }
+});
+
+</script>
+
+<td class="action">
+    <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href="{% url 'delete_student' item.id %}" id="item.id"  class="delete">
+    <span title="Delete record" class="glyphicon glyphicon-trash"></span>
+    </a>
+</td>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
 
