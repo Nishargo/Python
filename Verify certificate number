@@ -1,0 +1,97 @@
+~~~~~ URLS.PY ~~~~~~
+
+url(r'^$', 'mcadb.core.views.find_certificate', name='mainpage'),
+url(r'^verify_certificate$', 'mcadb.core.views.verify_cert_show_data', name='verify_certificate'),
+
+~~~~~ VERIFY_CERTIFICATE.HTML ~~~~~~
+
+{% extends "layout.html" %}
+
+{% block title%}
+| Verify certificate number
+{% endblock %}
+
+{% block content %}
+<div class="col-md-offset-3 col-md-5">
+
+<h3>Information by certificate number</h3>
+
+  <table class="table">
+    <tr>
+      <th>Certificate number</th>
+      <td>{{ form.cert_no }}</td>
+    </tr>
+
+    <tr>
+      <th>Name</th>
+      <td>{{ student.name }}</td>
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      <td>{{ student.cert_date|date:"d-m-Y" }}</td>
+    </tr>
+
+    <tr>
+      <th>Title</th>
+      <td>Mirantis Certified Administrator for OpenStack, Professional Level</td>
+    </tr>
+
+    <tr>
+      <th>Status</th>
+      <td>{% if student.result %}
+            PASS
+          {% else %}
+            FAIL
+          {% endif %}
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+
+{% endblock %}
+
+
+~~~~~ VIEWS.PY ~~~~~~
+
+def verify_cert_show_data(request):
+    # try:
+    #     student = Student.objects.get(pk=cert_no)
+    # except Student.DoesNotExist:
+    #     raise Http404
+
+    # if request.POST:
+    #     form = CaptchaForm(request.POST)
+    #     if form.is_valid():
+    #         print form.cleaned_data['cert_no']
+    #     else:
+    #         pass
+    # else:
+    #     form = CaptchaForm()
+
+    return render(request, 'certificate/verify_certificate.html')
+
+
+def find_certificate(request):
+    if request.POST:
+        form = CaptchaForm(request.POST)
+        if form.is_valid():
+            human = True
+
+            cert_number = form.cleaned_data.get('cert_no')
+            print cert_number
+
+            student = Student.objects.filter(cert_no=cert_number)
+            print student
+
+            return redirect('verify_certificate')
+        else:
+            messages.error(request, "It's bot. Please try again.")
+    else:
+        form = CaptchaForm()
+
+    return render(request, 'certificate/find_certificate.html', {
+        'form': form,
+         })
