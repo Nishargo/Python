@@ -83,9 +83,12 @@ def find_certificate(request):
             cert_number = form.cleaned_data.get('cert_no')
             print cert_number
 
-            student = Student.objects.filter(cert_no=cert_number)
-            print student
-
+            try:
+                student = Student.objects.filter(cert_no=cert_number)
+                print student
+            except Student.DoesNotExist:
+                raise Http404
+                
             return redirect('verify_certificate')
         else:
             messages.error(request, "It's bot. Please try again.")
